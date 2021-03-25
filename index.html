@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adam and Eva</title>
+
+</head>
+<body>
+
+
+
+
+
+    <script src="classApple.js"></script>
+    <script src="classHuman.js"></script>
+    <script>
+        let apple1 = new Apple();
+        let apple2 = new Apple();
+        let human1 = new Human('Adam','male','80kg');
+        let human2 = new Human('Eva','female','55kg');
+        // Hien thi mot nguoi
+        function showInfomation(human_obj){
+            console.log(human_obj.name);
+            console.log(human_obj.gender);
+            console.log(human_obj.getWeight());
+        //Thuc hien hanh dong an tao cua mot nguoi
+        }
+        function eat(human_obj,apple_obj,kg){
+            human_obj.eatApple(apple_obj,kg);
+        }
+        // Kiem tra trang thai qua tao
+        function checkApple(apple_obj){
+            console.log(apple_obj.getWeight())// dung phuong thuc truy cap doi tuong
+            console.log(apple_obj.weight)       //truy cap truc tiep den doi tuong
+        }
+        function checkApple2(human_obj,apple_obj){
+            console.log(human_obj.getName())
+            console.log(human_obj.checkApple(apple_obj))
+
+        }
+        showInfomation(human1);
+        eat(human1,apple1,3);
+        eat(human2,apple2,2);
+        checkApple(apple1);
+        checkApple2(human2,apple2);
+
+
+    </script>
+</body>
+</html>
